@@ -1,6 +1,14 @@
 {
-  "name": "fileUploadUi",
-  "version": "0.0.0",
+  "name": "wams",
+  "version": "0.0.1",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
@@ -8,24 +16,14 @@
     "angular-toastr": "~1.5.0",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.5.3"
+    "angular": "1.4.12",
+    "ng-file-upload": "^12.0.4"
   },
   "devDependencies": {
-    "angular-mocks": "~1.5.3"
-  },
-  "overrides": {
-    "bootstrap": {
-      "main": [
-        "less/bootstrap.less",
-        "dist/fonts/glyphicons-halflings-regular.eot",
-        "dist/fonts/glyphicons-halflings-regular.svg",
-        "dist/fonts/glyphicons-halflings-regular.ttf",
-        "dist/fonts/glyphicons-halflings-regular.woff",
-        "dist/fonts/glyphicons-halflings-regular.woff2"
-      ]
-    }
+    "lodash": "^4.5.1",
+    "angular-mocks": "1.4.9"
   },
   "resolutions": {
-    "angular": "~1.5.3"
+    "angular": "1.4.12"
   }
 }

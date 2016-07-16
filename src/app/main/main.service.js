@@ -25,23 +25,21 @@
           }
           $q.reject();
         }, function (error) {
-          $q.reject();
+          $q.reject(error);
         })
     }
 
-    function fileUpload(req) {
+    function fileUpload(file) {
+      var fd = new FormData();
+      fd.append('file', file);
       return $injector.get('$http')
-        .post('/api/upload-file', {
-          request: req
-        })
-        .then(function (sResp) {
-          if (sResp) {
-            return $q.when(sResp.data);
+        .post('/api/upload-file', fd, {
+          transformRequest: angular.identity,
+          headers: {
+            'Content-Type': undefined
           }
-          $q.reject();
-        }, function (error) {
-          $q.reject(error);
-        })
+        });
+
     }
   }
 })();
